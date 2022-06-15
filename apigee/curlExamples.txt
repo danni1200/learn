@@ -1,0 +1,16 @@
+https://apigee.com/organizations/amer-api-partner60
+
+myHelloWorldOauth2 App
+Key: IdLCHoWAHmEhmm3kJJfaQ1xzSnmw3wJG
+Secret: AbRUMwAd8agxJNrQ
+
+# helloworld with Oauth
+curl -v "https://amer-api-partner60-dev.apigee.net/hellooauth2"
+
+# get Token from OAuth Proxy
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" "https://amer-api-partner60-dev.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials" -d "client_id=IdLCHoWAHmEhmm3kJJfaQ1xzSnmw3wJG&client_secret=AbRUMwAd8agxJNrQ"
+
+zB6AGfT0SHrdhqM9ZLo69K2pvkeY
+
+# use Token and call hellooauth2
+curl https://amer-api-partner60-dev.apigee.net/hellooauth2/hellooauth2 -H "Authorization: Bearer zB6AGfT0SHrdhqM9ZLo69K2pvkeY"
